@@ -1,0 +1,110 @@
+{% extends 'details.html' %}
+{% load static %}
+
+{% block Title %}
+Archive From {{ page_date | date:"d M Y" }}
+{% endblock %}
+
+{% block Header_Title %}
+{{title}} 
+{% endblock %}
+
+{% block Breadcrumbs %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/posts/display/{{post_type}}/all">{{post_type}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ page_date | date:"d M Y" }}</li>
+    </nav>
+{% endblock %}
+
+{% block Search %}
+<form action="/posts/search/{{post_type}}" method='GET'>
+  <div class="search-option">
+    <input type="hidden" name="page" value="{{page|default:1}}">
+    <input type="text" name='par' placeholder="Search...">
+    <button class="button" type="submit">
+        <i class="fa fa-search"></i>
+    </button>
+  </div>
+</form>
+{% endblock %}
+
+
+
+{% block Content %}
+
+
+<!-- Start single blog -->
+<div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="row">
+        <div class='date-title'>
+            <h2>{{ page_date | date:"d M Y" }}</h2>
+        </div>
+      {% for post in posts_on_page %}
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="single-blog">
+            <div class="single-blog-img">
+              <a href="/posts/display/{{post.post_type}}/{{post.slug}}">
+                  <img src="{{post.picture.url}}" alt="">
+                </a>
+            </div>
+            <div class="blog-meta">
+              <span class="comments-type">
+                  <i class="fa fa-comment-o"></i>
+                  <a href="#">{{post.comment_count}} comments</a>
+                </span>
+              <span class="date-type">
+                  <i class="fa fa-calendar"></i>{{ post.date}}
+                </span>
+            </div>
+            <div class="blog-text">
+              <h4>
+                  <a href="/posts/display/{{post.post_type}}/{{post.slug}}">{{post.title}}</a>
+                </h4>
+              <p>
+                {{post.description}}
+              </p>
+            </div>
+            <span>
+                <a href="/posts/display/{{post.post_type}}/{{post.slug}}" class="ready-btn">Read more</a>
+              </span>
+          </div>
+        </div>
+      {% endfor %}
+      <!-- End single blog -->
+      
+      <div class="blog-pagination">
+        <ul class="pagination">
+          {% if posts_on_page.has_previous %}
+            <li><a href="?page={{ posts_on_page.previous_page_number }}{% if par %}&par={{par}}{%endif%}">&lt;</a></li>
+          {% else %}
+            <li><a href="?page=1&par={% if not par %}{% if par %}&par={{par}}{%endif%}{%endif%}">&lt;</a></li>
+          {% endif %}
+  
+          {% for each in page_count %}
+            {% ifequal posts_on_page.number each %}
+              <li class="active"><a href="?page={{ posts_on_page.number }}{% if par %}&par={{par}}{%endif%}">{{posts_on_page.number}}</a></li>
+            {% else %}
+            <li ><a href="?page={{ each }}{% if par %}&par={{par}}{%endif%}">{{each}}</a></li>
+            {% endifequal %}
+  
+          {% endfor %}
+  
+          {% if posts_on_page.has_next %}
+            <li><a href="?page={{ posts_on_page.next_page_number }}{% if par %}&par={{par}}{%endif%}">&gt;</a></li>
+          {% else %}
+            <li><a href="?page={{posts_on_page.paginator.num_pages}}{% if par %}&par={{par}}{%endif%}">&gt;</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+      .date-title{
+          margin-left: 280px;
+          margin-bottom: 50px;
+          font-style: italic;
+      }
+  </style>
+{% endblock %}

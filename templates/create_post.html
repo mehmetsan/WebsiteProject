@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block Title %}Create{% endblock %}
+
+{% block Content %}
+    <form class='article-form' action="/posts/create" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+
+        {{form.media}}
+        {{ form.as_p }}
+        <button type="submit" class="site-btn">Submit</button>
+    </form>
+
+    <style type="text/css">
+        .article-form{
+            position: relative;
+            width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            margin-bottom: 200px;
+        }
+        #id_add_tags{
+            width: 180px;
+        }
+        .tags_container{
+            width: 500px;
+        }
+    
+    </style>
+{% endblock %}

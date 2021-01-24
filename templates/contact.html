@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+Contact
+{% endblock %}
+
+{% block Content %}
+    
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Start Google Map -->
+            <div class="maps">
+              <!-- Start Map -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6120.684842714793!2d32.75179457766442!3d39.91135264714725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d13541cead%3A0x5573ab3f123f76e6!2sAnkara%2C%20Mustafa%20Kemal%2C%2006510%20%C3%87ankaya%2FAnkara!5e0!3m2!1str!2str!4v1606054463610!5m2!1str!2str" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <!-- End Map -->
+            </div>
+            <!-- End Google Map -->
+
+            <!-- Start  contact -->
+            <div class="email-form">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h2 class="Title">Contact Us</h2>
+                </div>
+              </div>
+              <div class="form contact-form">
+                <form action="/contact/" method="POST" role="form">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    {{form.name}}
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    {{form.email}}
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    {{form.subject}}
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    {{form.message}}
+                    <div class="validation"></div>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+    </div>
+
+    <style>
+      .form-group input[type=text]:focus {
+        width: 1300px;
+      }
+      .maps{
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        right: 0px;
+        height: 1000px;
+        width: 100%;
+        z-index: 0;
+      }
+      .email-form {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 500px;
+        margin-bottom: 100px;
+        
+      }
+  </style>
+{% endblock %}
+

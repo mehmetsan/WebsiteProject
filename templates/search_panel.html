@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+Search
+{% endblock %}
+
+{% block Content %}
+
+  <div><br><br><br></div>
+  <!-- Start Blog Area -->
+  <div id="blog" class="blog-area">
+    <div class="blog-inner area-padding">
+      <div class="blog-overly"></div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2 id=news>Search Results</h2>
+            </div>
+          </div>
+        </div>
+        {% for row in rows %}
+        <div class="row text-center">
+          {% for post in row %}
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single-blog">
+              <div class="single-blog-img">
+                <a href="/posts/display/{{post.post_type}}/{{post.slug}}">
+                  <img src="{{post.thumbnail.url}}" alt="">
+                </a>
+              </div>
+              <div class="blog-meta">
+                <span class="date-type">
+                    <i class="fa fa-calendar"></i>{{ post.date_as_day}}
+                  </span>
+              </div>
+              <div class="blog-text">
+                <h4>
+                    <a href="/posts/display/{{post.post_type}}/{{post.slug}}">{{post.title}}</a>
+                </h4>
+                <p>
+                  {{post.description}}
+                </p>
+              </div>
+              <span>
+                <a href="/posts/display/{{post.post_type}}/{{post.slug}}" class="ready-btn">Read more</a>
+              </span>
+              <br>
+              <br>
+            </div>
+
+          </div>
+            
+            {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- End Blog -->
+
+
+{% endblock %}

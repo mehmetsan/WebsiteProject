@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+Team
+{% endblock %}
+
+{% block Content %}
+
+    <div><br><br><br></div>
+  <!-- Start team Area -->
+  <div id="team" class="our-team-area area-padding">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+                <h2>Our special Team</h2>
+            </div>
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="team-top">
+
+                {% for member in team_members %}
+                <div class="col-md-3">
+                    <div class="single-team-member">
+                        <div class="team-img">
+                            <a href="#">
+                                <img src="{{member.picture.url}}" alt="">
+                            </a>
+                            
+                            <div class="team-social-icon text-center">
+                                <ul>
+                                    <li>
+                                        <a href="https://{{ member.linked_In_URL }}">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h4>{{member.first_name}} {{member.last_name}}</h4>
+                            <p>{{member.position}}</p>
+                            <p>Contact: {{member.email}}</p>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- End Team Area -->
+
+{% endblock %}

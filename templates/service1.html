@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+    Services
+{% endblock %}
+
+{% block Content %}
+
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>Clinical Trial Supply</h1>
+        </div>
+    </div>
+
+    <div class="breadcrumbs">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Services</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="text_container">
+        <h3>
+            Clinical Trial Supply
+        </h3>
+        <br>
+        <p>
+            As  a pioneer of Turkish Pharmaceutical Wholesalers, we are aware of the fact that a seamless supply chain of Investigational Medicinal Products (IMPs)[1] or basically referred as study drugs is crucial for the effectiveness of clinical trials. Success of clinical trials heavily depends on supplying appropriate amount of  study drugs or comparator drugs to various sites where clinical trials are being conducted on a timely manner so that prescribed drugs can be administered to patients on time with the required doses. Unavailability or any delay of comparator drugs in desired quantity and quality may cause a harm on the success of clinical trials or even worse it may put the safety of patients at risk.
+        </p>
+        <p>
+            More than 20 years of hands-on experience in handling, storing and distributing products for clinical trials has provided us an invaluable expertise in overcoming the challenges of clinical trial supply chain that we might face;
+        </p>
+        <ul>
+            <li>
+                Trade regulations governing handling and shipping of clinical trial supplies are diverse across different countries. Thus, strictest compliance with the related national and international regulations is essential for delivery of the products.
+            </li>
+            <li>
+                Comparator drugs are often so sensitive with expiry dates that they need to be delivered to trial site literally on time.
+            </li>
+            <li>
+                Special nature of some study drugs requires cold storage and delivery.
+            </li>
+            <li>
+                The supply requirements of such products may change in quantity throughout the trial period, so it is critical to be prepared for meeting fluctuating demands in clinical trial supplies.
+            </li>
+        </ul>
+        <br>
+        <p>
+            Regarding important aspects for the effectiveness of clinical trials and the challenges in clinical trial supply chain, with its integrated and synchronized logistics, we are the leader of Turkish Pharmaceutical Wholesalers. And we are offering a solution-oriented business expertise accumulated throughout many years of experience in pharmaceutical wholesale in Turkey.
+        </p>
+    </div>
+
+
+    <style>
+        h1, h3{
+            color: rgb(233, 64, 64);
+        }
+        .hero-image {
+            /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'img/banner.jpg' %});
+
+            /* Set a specific height */
+            height: 30%;
+
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-top: 70px;
+            }
+
+            /* Place text in the middle of the image */
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(199, 36, 36);
+        }
+        .breadcrumbs{
+            position: relative;
+            top: 15px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+
+        }
+        .title{
+            margin-top:  40px;
+            margin-bottom: 250px;
+        }
+        .text_container{
+            font-size: ;
+            position: relative;
+            margin-top: 50px;
+            margin-left: 350px;
+            margin-right: 400px;
+            margin-bottom: 50px;
+
+        }
+        .text_container li {
+            font-size: 14px;
+            margin-left: 50px;
+            list-style-type: circle;
+        }
+        .icons-part{
+            position: relative;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 50px
+        }
+        .text-part{
+            margin-left: 10px;
+            width: 800px;
+        }
+        .breadcrumb {
+            position: relative;
+            width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+{% endblock %}

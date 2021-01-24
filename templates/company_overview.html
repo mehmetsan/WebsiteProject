@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+    Overview
+{% endblock %}
+
+{% block Content %}
+    <br><br><br><br><br><br>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Overview</li>
+        </ol>
+    </nav>
+    <div class="title">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+                <h2> Overview </h2>
+            </div>
+        </div>
+    </div>
+    <div class="elite">
+        <div class="text-part">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum luctus tortor, sit amet tempus urna eleifend id. Sed sit amet gravida massa. Pellentesque nisl tortor, placerat eget lacus non, fermentum egestas ligula. Pellentesque odio turpis, congue sed lacus quis, accumsan volutpat neque. Praesent pretium venenatis euismod. Morbi justo purus, consequat vitae eleifend et, laoreet viverra sapien. Aliquam erat volutpat. Mauris volutpat vitae tellus et suscipit. Sed enim orci, euismod a mauris vel, accumsan lobortis elit. Donec pretium elit velit, eget commodo erat eleifend non. Aenean ut ornare augue. Suspendisse at magna finibus, pulvinar turpis et, semper purus. Nunc facilisis congue eros, in sodales tellus faucibus sed. Maecenas eu condimentum risus.
+                <br><br>
+                Duis nec leo nunc. Vestibulum quis lorem tellus. Phasellus volutpat gravida dignissim. Proin aliquet tempor ex vel convallis. Morbi vitae semper nunc, nec blandit erat. Ut eu mattis ipsum, quis placerat sem. Suspendisse vel elit egestas, ornare justo accumsan, mollis ante. Suspendisse potenti. Sed interdum auctor maximus. Pellentesque fermentum condimentum est, vitae dictum mi eleifend sit amet. Etiam consequat sed elit a commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel convallis turpis.
+                <br><br>
+                Nullam eu enim sem. Ut est justo, egestas id purus vitae, vestibulum vulputate ante. Fusce ipsum massa, euismod eu felis quis, blandit dignissim dui. Maecenas volutpat lorem quis fringilla aliquam. Fusce posuere fermentum ipsum at ultrices. Sed pellentesque pretium neque, vel maximus est tristique rutrum. Nam dui ligula, convallis a lectus eu, hendrerit pretium nisl. Aenean eget diam diam. Morbi sed ante molestie, dapibus tellus eget, ultricies arcu. Sed sit amet dolor magna. Cras non vehicula magna. Duis posuere eros magna, sed tincidunt risus congue eget.
+            </p>
+            
+        </div>
+        <div class="media-part">
+            <img src="{% static 'img/filler.jpg' %}">
+        </div>
+    </div>
+
+    <style>
+        .title{
+            margin-top:  40px;
+            margin-bottom: 50px;
+        }
+        .elite{
+            margin-top:  20px;
+            margin-bottom: 400px;
+            margin-left: 100px;
+            margin-right: 1000px
+        }
+        .media-part{
+            position: absolute;
+            width: 600;
+            height: 400;
+            top: 330px;
+            margin-bottom: 400px;
+            margin-left: 900px;
+            margin-right: 100px
+        }
+        .breadcrumb {
+            position: relative;
+            width: 1700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+
+
