@@ -99,8 +99,10 @@
                       <li class="dropdown-submenu">
                         <a class="test" tabindex="-1" href="#">International Sales<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="/services">Service 1</a></li>
-                          <li><a tabindex="-1" href="#">Article 2</a></li>
+                          <li><a tabindex="-1" href="/services/clinical-trial-supply">Clinical Trial Supply</a></li>
+                          <li><a tabindex="-1" href="/services/humanitarian-aid-projects">Humanitarian Aid Projects</a></li>
+                          <li><a tabindex="-1" href="/services/medical-supplies">Medical Supplies</a></li>
+                          <li><a tabindex="-1" href="/services/orphan-drugs">Orphan Drugs</a></li>
                         </ul>
                       </li>
                     </ul> 
@@ -223,75 +225,55 @@
 
     <!-- Start Footer bottom Area -->
     <footer>
-        <div class="footer-area">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="footer-content">
-                <div class="footer-head">
-                    <div class="footer-logo">
-                    <h2><span>e</span>Business</h2>
-                    </div>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                    <br>
-                    <a href="https://www.linkedin.com/company/mosaic-health-company/about/">
-                      <i class="fa fa-linkedin" style="font-size:45px;"></i>
-                    </a>
-                  </div>
-                </div>
-            </div>
-            <!-- end single footer -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="footer-content">
-                <div class="footer-head">
-                    <h4>Contact Us</h4>
-                    <p>
-                    Reach us for more information.
-                    </p>
-                    <div class="footer-contacts">
-                    <p><span>Tel:</span> +123 456 789</p>
-                    <p><span>Email:</span> contact@example.com</p>
-                    <p><span>Working Hours:</span> 9am-5pm</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12" >
+      <div class="footer-area">
+      <div class="container">
+          <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="footer-content">
-                <div class="footer-head text-center" >
-                  <h4>Location</h4>
-                  <img class="details-image" src="{% static 'img/map-loc.jpg' %}" alt="">
+              <div class="footer-head">
+                  <div class="footer-logo">
+                  <h2><span>e</span>Business</h2>
+                  </div>
+  
+                  <p>Mosaic Health Company, which cooperates with the world's leading companies, strives to ensure that its goods and services are provided to patients in an 
+                    effortless, effective, and timely manner within the context of ethical and scientific principles.
+                  </p>
+                  <br>
+                  <a href="https://www.linkedin.com/company/mosaic-health-company/about/">
+                    <i class="fa fa-linkedin" style="font-size:45px;"></i>
+                  </a>
                 </div>
               </div>
           </div>
-
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="footer-content">
+              <div class="footer-head">
+                  <h4>Contact Us</h4>
+                  <p>
+                  Reach us for more information.
+                  </p>
+                  <div class="footer-contacts">
+                  <p><span>Tel:</span> +90 (312) 475 73 23</p>
+                  <p><span>Email:</span> info@mosaichealth.com.tr</p>
+                  <p><span>Address:</span> Cevizlidere Mah. Ceyhun Atuf Kansu Cad. No:158/A  Çankaya/Ankara, Turkey</p>
+                  </div>
+              </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12" >
+            <div class="footer-content">
+              <div class="footer-head text-center" >
+                <h4>Location</h4>
+                <img class="details-image" src="{% static 'img/map-loc.jpg' %}" alt="">
+              </div>
             </div>
         </div>
-        </div>
-        <div class="footer-area-bottom">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="copyright text-center">
-                <p>
-                    &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
-                </p>
-                </div>
-                <div class="credits">
-                <!--
-                    All the links in the footer should remain intact.
-                    You can delete the links only if you purchased the pro version.
-                    Licensing information: https://bootstrapmade.com/license/
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-                -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </footer>
+  
+          </div>
+      </div>
+      </div>
+  </footer>
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -322,6 +304,9 @@
         });
     </script>
     <style>
+        .dropdown-submenu>ul{
+          width: 235px;
+        }
         .blog-pagination{
           padding-left: 330px;
         }
