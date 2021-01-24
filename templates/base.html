@@ -108,8 +108,10 @@
                       <li class="dropdown-submenu">
                         <a class="test" tabindex="-1" href="#">International Sales<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="/services/service1">Service 1</a></li>
-                          <li><a tabindex="-1" href="#">Article 2</a></li>
+                          <li><a tabindex="-1" href="/services/service1">Clinical Trial Supply</a></li>
+                          <li><a tabindex="-1" href="/services/service2">Humanitarian Aid Projects</a></li>
+                          <li><a tabindex="-1" href="/services/service3">Medical Supplies</a></li>
+                          <li><a tabindex="-1" href="/services/service4">Orphan Drugs</a></li>
                         </ul>
                       </li>
                     </ul> 
@@ -242,8 +244,7 @@
   <script src="{% static 'lib/appear/jquery.appear.js' %}"></script>
   <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
 
-  <!-- Contact Form JavaScript File -->
-  <script src="{% static 'contactform/contactform.js' %}"></script>
+
 
   <script src="{% static 'js/main.js' %}"></script>
   
@@ -258,6 +259,9 @@
   </script>
 
   <style>
+    .dropdown-submenu>ul{
+      width: 235px;
+    }
     img {
       border-radius: 0.5%;
     }

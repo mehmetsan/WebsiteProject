@@ -11,7 +11,7 @@ import mimetypes
 
 
 def home_view(request):
-    sliders = Slider.objects.filter(publishable=True).order_by('-id')[:3]
+    sliders = Slider.objects.filter(deploy=True).order_by('-id')[:3]
 
     slider_posts = []
     try:

@@ -1,0 +1,107 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block Title %} Services {%endblock %} 
+{% block Content %}
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Medical Supplies</h1>
+  </div>
+</div>
+
+<div class="breadcrumbs">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/">Services</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Medical Supplies</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="text_container">
+  <h3>Medical Supplies</h3>
+  <br />
+  <p>
+    Considered to be as low-cost, disposable and non-durable products and, in particular, medical supplies are important materials for the treatment of diseases and/or injuries.
+     Therefore, in line with our core conviction that any stakeholder in national healthcare markets around the world needs to have access to high quality and inexpensive 
+     pharmaceuticals whenever needed, Mosaic Health Company's product range is as large as it includes medical supplies and equipment; consumables, various diagnostic and 
+     personalized kits, surgical, dental, laboratory and hospital equipment, and so on. As a pioneer of Turkish pharmaceutical wholesalers and with years of experience in their 
+     specific field , we provide competitively priced medical supplies and equipments, including but not limited to healthcare establishments, clinics and hospitals, on an 
+     international basis.
+  </p>
+
+</div>
+
+<style>
+  h1,
+  h3 {
+    color: rgb(233, 64, 64);
+  }
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url({% static "img/medical_supplies.jpg" %});
+
+    /* Set a specific height */
+    height: 30%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 70px;
+  }
+
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(199, 36, 36);
+  }
+  .breadcrumbs {
+    position: relative;
+    top: 15px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+  }
+  .title {
+    margin-top: 40px;
+    margin-bottom: 250px;
+  }
+  .text_container {
+    font-size: ;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 400px;
+    margin-bottom: 50px;
+  }
+  .text_container li {
+    font-size: 14px;
+    margin-left: 50px;
+    list-style-type: circle;
+  }
+  .icons-part {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  .text-part {
+    margin-left: 10px;
+    width: 800px;
+  }
+  .breadcrumb {
+    position: relative;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+{% endblock %}

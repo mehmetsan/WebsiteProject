@@ -1,0 +1,116 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block Title %} Services {%endblock %} 
+{% block Content %}
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Orphan Drugs</h1>
+  </div>
+</div>
+
+<div class="breadcrumbs">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/">Services</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Orphan Drugs</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="text_container">
+  <h3>Orphan Drugs</h3>
+  <br />
+  <p>
+    The commonly named 'orphan drugs' are designed to cure illnesses so rare that sponsors are hesitant to produce them under conventional marketing conditions. The path from the 
+    discovery of a new molecule to its commercialization is long (10 years on average), costly (several tens of millions of euros), and very unpredictable (among ten molecules tested,
+     only one may have a therapeutic effect). The development of a drug intended to treat a rare disease does not allow the capital invested in its research to be recovered. 
+  </p>
+  <p>   
+    Orphan medicinal products may be defined as: 
+  </p>
+  <p>
+    Drugs that are not produced by the pharmaceutical industry for economic purposes but that lead to the need for public health. In fact, indications of a drug may also be 
+    considered 'orphan' as a substance may be used in the treatment of a frequent illness but may not have been developed for another, more rare indication.
+  </p>
+  <p>
+    We have merged our valuable experiences under the name of Mosaic Health Company. The members of the company had previously worked in the high-volume supply of orphan drug 
+    projects in which supplying orphan drugs to the Turkish Pharmacists’ Association and a few pharmaceutical warehouses which are under the Social Security Institution (SSI) .
+    Our Company specializes in determining the status of orphan drugs, circumstances of rare diseases, and patient’s demand for these products.
+  </p>
+
+</div>
+
+<style>
+  h1,
+  h3 {
+    color: rgb(233, 64, 64);
+  }
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url({% static "img/orphan_drugs.jpg" %});
+
+    /* Set a specific height */
+    height: 30%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 70px;
+  }
+
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(199, 36, 36);
+  }
+  .breadcrumbs {
+    position: relative;
+    top: 15px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+  }
+  .title {
+    margin-top: 40px;
+    margin-bottom: 250px;
+  }
+  .text_container {
+    font-size: ;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 400px;
+    margin-bottom: 50px;
+  }
+  .text_container li {
+    font-size: 14px;
+    margin-left: 50px;
+    list-style-type: circle;
+  }
+  .icons-part {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  .text-part {
+    margin-left: 10px;
+    width: 800px;
+  }
+  .breadcrumb {
+    position: relative;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+{% endblock %}

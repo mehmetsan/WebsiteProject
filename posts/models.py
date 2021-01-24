@@ -19,6 +19,7 @@ class Slider( models.Model ):
     description = models.CharField( max_length = 300, blank=True, null=True)
     color = models.CharField( max_length = 300, blank=True, null=True)
     deploy = models.BooleanField(default=False)
+    site_url = models.CharField( max_length = 300, blank=True, null=True )
 
     def __str__(self):
         return self.title1
