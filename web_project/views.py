@@ -131,4 +131,5 @@ def quality_view( request ):
     return render(request, 'quality_assurance.html', {})
 
 def services_view( request, servicename ):
+
     return render(request, servicename+'.html', {})
