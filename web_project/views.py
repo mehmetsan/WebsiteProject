@@ -13,22 +13,11 @@ import mimetypes
 def home_view(request):
     sliders = Slider.objects.filter(deploy=True).order_by('-id')[:3]
 
-    slider_posts = []
-    try:
-        slider_posts = PostItem.objects.all().filter(deploy=True).order_by('-id')[:3]
-    except:
-        slider_posts = [1,2,3]
-
-    carausels = []
-    for i in range( len(sliders)):
-        carausels.append( [sliders[i],slider_posts[i]] )
-
-
     # Latest News
 
     latest_news = PostItem.objects.all().filter(post_type="News", publishable=True).order_by('-id')[:3]
 
-    return render(request, 'index.html', {'sliders': carausels, 'latest_news':latest_news})
+    return render(request, 'index.html', {'sliders': sliders, 'latest_news':latest_news})
 
 
 def team_view(request):

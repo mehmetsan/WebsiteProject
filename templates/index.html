@@ -26,27 +26,27 @@ Home
             <div class="item active">
               <div class="carousel-caption">
                 <h5>
-                  <a href="/posts/display/{{slide.1.post_type}}/{{slide.1.slug}}"><strong style="color:{{slide.0.color}};">{{slide.0.title1}}</strong></a>
+                  <a href="{{slide.site_url}}"><strong style="color:{{slide.color}};">{{slide.title1}}</strong></a>
                 </h5>
-                <h3 style="color:{{slide.0.color}};">{{slide.0.description}}</h3>
+                <h3 style="color:{{slide.color}};">{{slide.description}}</h3>
                 <span>
-                  <a href="/posts/display/{{slide.1.post_type}}/{{slide.1.slug}}" class="ready-btn">Read more</a>
+                  <a href="{{slide.site_url}}" class="ready-btn">Read more</a>
                 </span>
             </div>
-              <img src="{{slide.0.picture.url}}" style="width:100%;">
+              <img src="{{slide.picture.url}}" style="width:100%;">
             </div>
           {% else %}
             <div class="item">
               <div class="carousel-caption">
                 <h5>
-                  <a href="/posts/display/{{slide.1.post_type}}/{{slide.1.slug}}"><strong>{{slide.0.title1}}</strong></a>
+                  <a href="{{slide.site_url}}"><strong>{{slide.title1}}</strong></a>
                 </h5>
-                <h3>{{slide.0.description}}</h3>
+                <h3>{{slide.description}}</h3>
                 <span>
-                  <a href="/posts/display/{{slide.1.post_type}}/{{slide.1.slug}}" class="ready-btn">Read more</a>
+                  <a href="{{slide.site_url}}" class="ready-btn">Read more</a>
                 </span>
               </div>
-              <img src="{{slide.0.picture.url}}"  style="width:100%;">
+              <img src="{{slide.picture.url}}"  style="width:100%;">
             </div>
           {% endif %}
 
