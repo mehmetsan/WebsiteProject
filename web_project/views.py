@@ -122,3 +122,6 @@ def quality_view( request ):
 def services_view( request, servicename ):
 
     return render(request, servicename+'.html', {})
+
+def privacy_view( request):
+    return render(request, 'privacy.html', {})

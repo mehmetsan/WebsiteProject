@@ -51,7 +51,7 @@
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <!-- Brand -->
-                <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                <a class="navbar-brand page-scroll sticky-logo" href="/">
                   
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <img class="firm-logo" src="{% static 'img/logo.png' %}" alt="" title=""> 
@@ -208,7 +208,9 @@
               <div class="footer-content">
               <div class="footer-head">
                   <div class="footer-logo">
-                  <h2><span>e</span>Business</h2>
+                    <a href="/">
+                      <img class="bottom-firmlogo" src="{% static 'img/logo.png' %}" alt="" title=""> 
+                    </a>
                   </div>
   
                   <p>Mosaic Health Company, which cooperates with the world's leading companies, strives to ensure that its goods and services are provided to patients in an 
@@ -280,6 +282,10 @@
         });
     </script>
     <style>
+        .bottom-firmlogo{
+          height: 80px;
+          width: 220px;
+        }
         .dropdown-submenu {
           position: relative;
         }
@@ -290,8 +296,8 @@
           margin-top: -1px;
         }
         .firm-logo{
-          background-color: aliceblue;
-          height: 50px;
+          background-color:white;
+          height: 40px;
           width: 270px;
         }
         .dropdown-submenu>ul{
@@ -340,8 +346,39 @@
           left: 0;
           width: 100%;
           height: 75px;
-          background: rgba(0, 0, 0, 1);
+          background: white;
           z-index: 9;
+        }
+        .header-area.stick {
+        background-color: white;
+        }
+        .main-menu ul.navbar-nav li a {
+        color:black;
+        }
+        .stick .main-menu ul.nav>li>a {
+        color:black;
+        }
+        .stick .main-menu ul.nav>li>a:hover {
+        color:black;
+        }
+        .stick .navbar-header a.navbar-brand {
+          display: inline-block;
+          height: 70px;
+        }
+        .main-menu ul.navbar-nav li.active a {
+          color: black;
+        }
+        .main-menu ul.navbar-nav li.active a:focus {
+          color: black;
+        }
+        .main-menu .dropdown ul {
+          background:white;
+        }
+        .main-menu ul.navbar-nav li.active a{
+          color: black;
+        }
+        .main-menu ul.navbar-nav li.active a:hover {
+          color: black;
         }
         .searchbar{
           position: relative;

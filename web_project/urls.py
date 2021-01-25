@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import home_view, team_view, contact_view, about_view, overview_view, search_panel_view, pdf_download, quality_view, services_view
+from .views import home_view, team_view, contact_view, about_view, overview_view, search_panel_view, pdf_download, quality_view, services_view, privacy_view
 
 # FOR PROFILE PHOTO
 from . import settings
@@ -22,7 +22,7 @@ urlpatterns = [
     path('quality-assurance/', quality_view),
     path('services/<str:servicename>/', services_view),
 
-
+    path('privacy', privacy_view),
     path('pdf/<str:filename>/', pdf_download)
 ]
 

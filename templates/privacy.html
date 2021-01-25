@@ -1,11 +1,11 @@
 {% extends 'base.html' %} 
 {% load static %} 
-{% block Title %} Services {%endblock %} 
+{% block Title %} Privacy {%endblock %} 
 {% block Content %}
 
 <div class="hero-image">
   <div class="hero-text">
-    <h1>Humanitarian Aid Projects</h1>
+    <h1>Privacy Policy</h1>
   </div>
 </div>
 
@@ -13,34 +13,28 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/">Services</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Humanitarian Aid Projects</li>
+      <li class="breadcrumb-item active" aria-current="page">Privacy</li>
     </ol>
   </nav>
 </div>
 
 <div class="text_container">
-  <h3>Humanitarian Aid Projects</h3>
-  <br />
+  <h3>Privacy Policy</h3>
+  <br>
   <p>
-    As far as national and foreign humanitarian/relief organizations are concerned, as our invaluable partners in the relief of human suffering in natural or man-made crises, internat
-    ional NGOs are actively working to provide quick access to critical health care for people impacted by natural disasters or conflicts. Serving humanitarian organizations and supp
-    orting them with their local and international health assistance programs is one of our top priorities. Therefore, we have always been in solidarity with international humanitari
-    an organizations with our services and experience in the distribution of medicinal and healthcare goods to assist them in humanitarian relief operations.
+    This will be the privacy policy
   </p>
-
 </div>
-<br><br>
 
 <style>
   h1,
   h3 {
-    color: rgb(42, 107, 226);
+    color: rgb(233, 64, 64);
   }
   .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url({% static "img/humanitarian_projects.jpg" %});
+      url({% static "img/orphan_drugs.jpg" %});
 
     /* Set a specific height */
     height: 30%;
@@ -59,6 +53,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+ 
   .breadcrumbs {
     position: relative;
     top: 15px;
