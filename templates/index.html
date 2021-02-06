@@ -25,10 +25,10 @@ Home
           {% if forloop.counter == 1 %}
             <div class="item active">
               <div class="carousel-caption">
-                <h5>
+                <h1 class="carousel-title">
                   <a href="{{slide.site_url}}"><strong style="color:{{slide.color}};">{{slide.title1}}</strong></a>
-                </h5>
-                <h3 style="color:{{slide.color}};">{{slide.description}}</h3>
+                </h1>
+                <h3 class="carousel-desc" style="color:{{slide.color}};">{{slide.description}}</h3>
                 <span>
                   <a href="{{slide.site_url}}" class="ready-btn">Read more</a>
                 </span>
@@ -38,10 +38,10 @@ Home
           {% else %}
             <div class="item">
               <div class="carousel-caption">
-                <h5>
+                <h1 class="carousel-title">
                   <a href="{{slide.site_url}}"><strong>{{slide.title1}}</strong></a>
-                </h5>
-                <h3>{{slide.description}}</h3>
+                </h1>
+                <h3 class="carousel-desc" style="color:{{slide.color}};">{{slide.description}}</h3>
                 <span>
                   <a href="{{slide.site_url}}" class="ready-btn">Read more</a>
                 </span>
@@ -80,7 +80,6 @@ Home
       </div>
       <div class="row text-center">
         <div class="services-contents">
-          <!-- Start Left services -->
           <div class="col-md-3 col-sm-4 col-xs-12">
             <div class="about-move">
               <div class="services-details">
@@ -152,7 +151,6 @@ Home
               <!-- end about-details -->
             </div>
           </div>
-          <!-- End Left services -->
           <div class="col-md-3 col-sm-4 col-xs-12">
             <!-- end col-md-4 -->
             <div class=" about-move">
@@ -162,7 +160,8 @@ Home
                     <img src="{% static 'img/icons/temperature.png' %}" width="40" height="40">
                   </div>
                   <br>
-                  <h4>Cold Storage Room (2-8°C)</h4>
+                  <h4 style="margin-bottom: 0;">Cold Storage Room</h4>
+                  <h4>(2-8°C)</h4>
                   <p>
                     With the presence of a chilled storage for preservation (2-8°C) and an ambient storage area, the goods are managed efficiently according to their characteristics.
                   </p>
@@ -171,7 +170,6 @@ Home
               <!-- end about-details -->
             </div>
           </div>
-          <!-- End Left services -->
           <div class="col-md-3 col-sm-4 col-xs-12">
             <!-- end col-md-4 -->
             <div class=" about-move">
@@ -253,7 +251,7 @@ Home
                   <img src="{% static 'img/clinical_trial.jpg' %}" alt="">
                 </a>
                 <br><br>
-                <h4>Clinical Trial Supply</h4>
+                <a href="services/clinical-trial-supply"><h4>Clinical Trial Supply</h4></a>
                 <p>
                   The lack of supply or delay of comparator drugs in the desired quantities and quality could affect the effectiveness of clinical trials or, worse yet,
                    could place the safety of patients at risk.
@@ -271,7 +269,7 @@ Home
                   <img src="{% static 'img/humanitarian_projects.jpg' %}" alt="">
                 </a>
                 <br><br>
-                <h4>Humanitarian Aid Projects</h4>
+                <a href="services/humanitarian-aid-projects"><h4>Humanitarian Aid Projects</h4></a>
                 <p>
                   Serving humanitarian organizations and supporting them with their local and international health assistance programs is one of our top priorities.  
                 </p>
@@ -288,7 +286,7 @@ Home
                   <img src="{% static 'img/medical_supplies.jpg' %}" alt="">
                 </a>
                 <br><br>
-                <h4>Medical Supplies</h4>
+                <a href="services/medical-supplies"><h4>Medical Supplies</h4></a>
                 <p>
                   Considered to be as low-cost, disposable and non-durable products and, in particular, medical supplies are important materials for the treatment of diseases 
                   and/or injuries. 
@@ -306,7 +304,7 @@ Home
                   <img src="{% static 'img/orphan_drugs.jpg' %}" alt="">
                 </a>
                 <br><br>
-                <h4>Orphan Drugs</h4>
+                <a href="services/orphan-drugs/"><h4>Orphan Drugs</h4></a>
                 <p>
                   The commonly named 'orphan drugs' are designed to cure illnesses so rare that sponsors are hesitant to produce them under conventional marketing conditions. 
                 </p>
@@ -407,7 +405,7 @@ Home
     }
 
     #home{
-      margin-bottom: 650px;
+      margin-bottom: 680px;
     }
 
     .details{
@@ -416,13 +414,7 @@ Home
       margin-bottom: 50px;
 
     }
-    post-text{
-      position: relative;
-      width: 250px;
-      margin-left: 50px;
-      margin-right: 20px;
 
-    }
     .post-img{
       position: relative;
       width: 250px;
@@ -439,56 +431,33 @@ Home
     }
     .myCarousel{
       position: relative;
-      top: auto;
-      margin-bottom: 100px;
-      left: 0;
-      width: 100%;
+      top: 0px;
+      margin-bottom: auto;
       height: 250px;
-      background: rgba(0, 0, 0, 1);
-      z-index: 2;
+      font-family: sans-serif;
     }
     .carousel-caption{
       position: absolute;
-      top: 70px;
+      top: 35%;
       width: 100%;
-      color: white;
       z-index: 3;
       left: 0%;
-    }
-
-    .carousel-caption h5 a{
-      position: relative;
-      top: 300px;
-      font-family: sans-serif;
       font-size: 50px;
-      width: 100%;
-      color:rgb(117, 89, 89);
-      z-index: 9;
-      left: 0px;
     }
 
-    .carousel-caption h3{
+    .carousel-title{
       position: relative;
+      margin-bottom: 50px;
+    }
 
-      top: 350px;
-      font-family: sans-serif;
+    .carousel-desc{
+      position: relative;
       font-style: italic;
       font-size: 30px;
       width: 70%;
-      color:rgb(117, 89, 89);
-      z-index: 9;
       left: 300px;
     }
 
-    .carousel-caption span{
-      position: relative;
-      top: 400px;
-      font-family: sans-serif;
-      font-size: 50px;
-      width: 100%;
-      z-index: 9;
-      left: 0px;
-    }
   </style>
 
   {% endblock %}
