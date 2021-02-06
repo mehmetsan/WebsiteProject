@@ -1,14 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from posts.models import PostItem, Slider
 from posts.forms import EmailForm
 from users.models import Employee
-from django.core.mail import send_mail
 
+from django.contrib import messages
+from django.core.mail import send_mail
 from django.http import HttpResponse
+
 from wsgiref.util import FileWrapper
 import os
 import mimetypes
-
+import requests
+import json
+from dotenv import load_dotenv
 
 def home_view(request):
     sliders = Slider.objects.filter(deploy=True).order_by('-id')[:3]
@@ -29,9 +33,26 @@ def team_view(request):
 
 def contact_view(request):
 
+    load_dotenv('.env')
+
+    CAPTCHA_SECRET = os.getenv('CAPTCHA_SECRET')
+
     email_form = EmailForm(request.POST or None)
 
     if request.method == 'POST':
+
+        cap_token = request.POST.get('g-recaptcha-response')
+        cap_url = 'https://www.google.com/recaptcha/api/siteverify'
+        cap_secret = CAPTCHA_SECRET
+        cap_data = {'secret':cap_secret, 'response':cap_token}
+        cap_server_response = requests.post(url=cap_url, data=cap_data)
+        cap_json = json.loads(cap_server_response.text)
+
+        # IF CAPTHCA FAILS
+        if cap_json['success'] == False:
+            messages.error( request, "Invalid attempt, please refresh the page.")
+            return redirect('/contact')
+
         address = 'info@mosaichealth.com.tr'
         message_name = request.POST['name']
         message_email = request.POST['email']
@@ -48,6 +69,7 @@ def contact_view(request):
             address,  # from email
             [address],  # to email
         )
+        return redirect('/')
 
     return render(request, 'contact.html', {'form': email_form})
 

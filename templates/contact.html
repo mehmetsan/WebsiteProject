@@ -45,8 +45,17 @@ Contact
                     {{form.message}}
                     <div class="validation"></div>
                   </div>
-                  <div class="g-recaptcha" data-sitekey="6Lc-rzsaAAAAAOlZMHk0oOfpP8dLW-kcxwAVem_J"></div>
+                  <div class="g-recaptcha" data-sitekey="6Le4N00aAAAAAGQMJi-0Iy0-S3oUgBkwlOq24OWL"></div>
                   <div class="text-center"><button type="submit">Send Message</button></div>
+                  {% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+
+                        {{ message }}
+
+                    </div>
+                  {% endfor %}
                 </form>
               </div>
             </div>
