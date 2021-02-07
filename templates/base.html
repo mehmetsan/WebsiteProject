@@ -59,8 +59,7 @@
             <nav class="navbar navbar-default">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <!-- Brand -->
-                <a class="navbar-brand page-scroll sticky-logo" href="/">
+
                   
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <img class="firm-logo" src="{% static 'img/logo.png' %}" alt="" title=""> 
@@ -213,13 +212,20 @@
 
   <script src="{% static 'js/main.js' %}"></script>
   
-  <script>
+  <script type="text/javascript">
     $(document).ready(function(){
       $('.dropdown-submenu a.test').on("click", function(e){
         $(this).next('ul').toggle();
         e.stopPropagation();
         e.preventDefault();
       });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 3000
+      })
     });
   </script>
 
@@ -229,9 +235,11 @@
       width: 250px;
     }
     .firm-logo{
+      margin-top: 10px;
+      margin-left: 30%;
       background-color: white;
-      height: 40px;
-      width: 220px;
+      height: 55px;
+      width: 180px;
     }
     .dropdown-submenu {
       position: relative;
@@ -261,7 +269,7 @@
       z-index: 9;
     }
     .header-area.stick {
-    background-color: white;
+      background-color: white;
     }
 
     .stick .navbar-header a.navbar-brand {
@@ -269,17 +277,17 @@
       height: 70px;
     }
     .stick .main-menu ul.nav>li>a {
-    color:black;
+      color:black;
     }
     .stick .main-menu ul.nav>li>a:hover {
-    color:black;
+      color:black;
     }
 
     .stick .main-menu ul.navbar-nav li.active a {
-        color: #0a0000;
+      color: #0a0000;
     }
     .stick .main-menu ul.navbar-nav li.active a {
-        color: #0a0000;
+      color: #0a0000;
     }
     
     .main-menu .dropdown ul {
